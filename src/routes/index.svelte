@@ -5,10 +5,10 @@
     //     title = 'Something completelly different!';
     // }
 
-    import Title from '$lib/title.svelte';
+    // import Title from '$lib/title.svelte';
 </script>
 
-<Title />
+<!-- <Title /> -->
 
 <div class="index">
     <h2>Welcome</h2>
