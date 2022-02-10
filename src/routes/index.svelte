@@ -1,15 +1,3 @@
-<!-- for fetching data we need a separate script tags with context attribute equal to module -->
-<script context="module">
-    // export async function load(context) {
-    //     context.fetch()
-    // }
-    //  destructuring the above fetch functionality
-    export async function load({ fetch }) {
-        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-        const res = await fetch(apiUrl);
-    }
-</script>
-
 <script>
     // let title = 'Ninja Gaming Guides';
 

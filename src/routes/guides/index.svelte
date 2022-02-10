@@ -1,3 +1,20 @@
+<!-- for fetching api data we need aditional script tag with context attribute of module -->
+<script context="module">
+    // export async function load(context) {
+    //     context.fetch();
+    // }
+    // destructuring the above fetch call
+    export async function load( { fetch }) {
+        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        const res = await fetch(apiUrl);
+        const guides = await res.json();
+    }
+</script>
+
+<script>
+
+</script>
+
 <div class="guides">
     <ul>
         <li><a href="/">Guide 1</a></li>
