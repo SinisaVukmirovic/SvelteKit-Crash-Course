@@ -23,4 +23,7 @@
         text-align: center;
         margin: 1.5rem auto;
     }
+    .index a {
+        margin: 1rem;
+    }
 </style>
