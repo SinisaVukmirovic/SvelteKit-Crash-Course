@@ -34,10 +34,18 @@
         <li><a href="/">Guide 2</a></li>
     </ul> -->
     <!-- replacing the above with the API data -->
-    <ul>
+    <!-- <ul>
         {#each guides as guide}
             <li>
                 <a href="/">{guide.title}</a>
+            </li>
+        {/each}
+    </ul> -->
+    <!-- making the dynamic pages from the code above -->
+    <ul>
+        {#each guides as guide}
+            <li>
+                <a href={`/guides/${guide.id}`}>{guide.title}</a>
             </li>
         {/each}
     </ul>
