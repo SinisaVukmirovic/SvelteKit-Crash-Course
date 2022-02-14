@@ -45,7 +45,9 @@
     <ul>
         {#each guides as guide}
             <li>
-                <a href={`/guides/${guide.id}`}>{guide.title}</a>
+                <!-- <a href={`/guides/${guide.id}`}>{guide.title}</a> -->
+                <!-- to prefetch the data on hover over the link -->
+                <a sveltekit:prefetch href={`/guides/${guide.id}`}>{guide.title}</a>
             </li>
         {/each}
     </ul>
