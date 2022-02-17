@@ -4,10 +4,31 @@
     //     context.fetch();
     // }
     // destructuring the above fetch call
+    // export async function load( { fetch }) {
+    //     const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+    //     const res = await fetch(apiUrl);
+    //     const guides = await res.json();
+
+    //     if (res.ok) {
+    //         return {
+    //             props: {
+    //                 guides
+    //             }
+    //         }
+    //     }
+
+    //     return {
+    //         status: res.status,
+    //         error: new Error('Could not fetch the guides!')
+    //     }
+    // }
+
+    // API Routes to some backend DB in the future...
     export async function load( { fetch }) {
-        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        const apiUrl = '/guides.json';
         const res = await fetch(apiUrl);
-        const guides = await res.json();
+        // we need to destructure because we get an obj
+        const { guides } = await res.json();
 
         if (res.ok) {
             return {

@@ -1,10 +1,19 @@
 <script context='module'>
-    export async function load( { fetch, params }) {
+    // export async function load({ fetch, params }) {
+    //     const id = params.id;
+    //     console.log(id)
+    //     const apiUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    //     const res = await fetch(apiUrl);
+    //     const guide = await res.json();
+
+        // for API routes
+    export async function load({ fetch, params }) {
         const id = params.id;
         console.log(id)
-        const apiUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
+        const apiUrl = `/guides/${id}.json`;
         const res = await fetch(apiUrl);
-        const guide = await res.json();
+        // again !!! must destructure in obj
+        const { guide } = await res.json();
 
         if (res.ok) {
             return {
@@ -25,6 +34,8 @@
             redirect: '/guides'
         }
     }
+
+    
 </script>
 
 <script>
