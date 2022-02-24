@@ -1,38 +1,12 @@
-# create-svelte
+## SvelteKit Notes
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+### Components
+#### Component is a stand alone sections of a webpage (navbar, article, banner...). In SvelteKit, whole pages are represented by components (index page components to represent index page, about page components to represent the about page...) Svelte components have to be names "something.svelte".
+##### It is a "good practice" to give class name to a component the same name as component name.
+##### Styles in SvelteKit are scoped to a particular component.
 
-## Creating a project
+### Routes And Pages
+#### Any component in (sub)folder names "index.svelte" is treated as the root component for whatever folder/route it's in (much like the index.html page for a webpage). For exmple index.svelte in ./routes/guides/index.svelte component would be the root component of the guides route/subfolder. So route of just href="/" leades to the index.svelte root component inside guides folder.
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Reusable Components
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
