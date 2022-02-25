@@ -13,3 +13,6 @@
 
 ### Layout Components
 #### Layout components wraps out page component and they contain different elements or different parts of a template that would be common to every page (title, footer...). In order to create Layout component we create and name a component "__layout.svelte" (2 leading underscores). This tells SvelteKit that this is a special layout component.
+
+### Reset Layout
+#### Reset layout is just, basically, another layout component. We place it inside whatever folder we want a new layout for components in that folder. Reset layout component is created by naming component as "__layout.reset.svelte". this tells SvelteKit that for this folder we want to use this layout instead.
