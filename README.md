@@ -16,3 +16,22 @@
 
 ### Reset Layout
 #### Reset layout is just, basically, another layout component. We place it inside whatever folder we want a new layout for components in that folder. Reset layout component is created by naming component as "__layout.reset.svelte". this tells SvelteKit that for this folder we want to use this layout instead.
+
+### Loading Data
+#### To fetch some data we do it in a separate script tap inside of whatever component that needs the data. We create a new and separate script tag above the regular script tag and give it an atribute "context" with the value of "module" - context="module". Inside this script we have a special SvelteKit async function called "load", and we use this function to fetch any data.
+
+<pre><code>
+<script context="module">
+    export async function load (context) {
+        context.fetch();
+    }
+
+    // or shorter (destructuring)
+
+    export async function load ({ fetch }) {
+        fetch();
+    }
+</script>
+</code></pre>
+
+#### The load() function takes in an argument automatically, which is a "context" object. On that context object is a few different things, one of those things is the fetch() function. The fetch() API is meant for the browser, context object exposses it for us on the server too, so that this script can run on the server, to fetch the data so we can prerender our template.
