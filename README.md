@@ -35,3 +35,7 @@
 </code></pre>
 
 #### The load() function takes in an argument automatically, which is a "context" object. On that context object is a few different things, one of those things is the fetch() function. The fetch() API is meant for the browser, context object exposses it for us on the server too, so that this script can run on the server, to fetch the data so we can prerender our template.
+
+### Dynamic Routes
+#### A single page for many different links. It this particular case, all guides have an ID. To create a dynamic component, we wrap the name of the component with square brackerts [ ]. ( \\[id\\].svelte ) This tells the SvelteKit that this part of the URL is changeable. 
+#### Property name must be the same as name we chouse to name our file name component!
