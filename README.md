@@ -39,3 +39,6 @@
 ### Dynamic Routes
 #### A single page for many different links. It this particular case, all guides have an ID. To create a dynamic component, we wrap the name of the component with square brackerts [ ]. ( \\[id\\].svelte ) This tells the SvelteKit that this part of the URL is changeable. 
 #### Property name must be the same as name we chouse to name our file name component!
+
+### Redirects
+#### To redirect the user to a different path in case of a page not found or similar, with a "redirect" property  and a path set as value.
