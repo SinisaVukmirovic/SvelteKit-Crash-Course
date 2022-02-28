@@ -42,3 +42,6 @@
 
 ### Redirects
 #### To redirect the user to a different path in case of a page not found or similar, with a "redirect" property  and a path set as value.
+
+### Prefetching Data
+#### To prefetch the data on hover on links, all wee need to do is add a directive "sveltekit:prefetch" on the links. 
