@@ -45,3 +45,5 @@
 
 ### Prefetching Data
 #### To prefetch the data on hover on links, all wee need to do is add a directive "sveltekit:prefetch" on the links. 
+
+### Deplay to Vercel
